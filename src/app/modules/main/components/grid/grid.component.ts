@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppData } from 'src/app/shared';
 
 @Component({
   selector: 'app-grid',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridComponent implements OnInit {
 
-  constructor() { }
+  @Input() repository = [];
+  constructor() {
+  }
 
   ngOnInit() {
+    AppData.repositorySub$.subscribe((res) => {
+      this.repository = res;
+      console.log(this.repository);
+    });
+
   }
 
 }

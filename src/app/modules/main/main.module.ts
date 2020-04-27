@@ -4,6 +4,7 @@ import { MainComponent } from './main.component';
 import { GridComponent } from './components/grid/grid.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { RouterModule, Routes } from '@angular/router';
+import { OrderByPipe } from './components/grid/order-by.pipe';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [MainComponent, GridComponent, PaginationComponent],
+  declarations: [MainComponent, GridComponent, PaginationComponent, OrderByPipe],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)

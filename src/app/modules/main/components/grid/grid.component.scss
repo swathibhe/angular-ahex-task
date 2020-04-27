@@ -1,0 +1,15 @@
+.main-div {
+  margin-top: 2em;
+  padding: 10px 10rem;
+  .my-custom-scrollbar {
+    position: relative;
+    height: 340px;
+    overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+    display: block;
+  }
+  .btn-info {
+    margin-bottom: 10px;
+  }
+}

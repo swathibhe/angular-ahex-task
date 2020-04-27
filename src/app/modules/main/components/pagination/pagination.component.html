@@ -1,1 +1,14 @@
-<p>pagination works!</p>
+<div class="text-algin-r" >
+    <button (click)="firstClick()" class="page-btn-css" [disabled]="paginationValue===0">
+        First
+    </button>
+    <button (click)="previousClick()" class="page-btn-css" [disabled]="paginationValue===0">
+        Previous
+    </button>
+    <button (click)="nextClick()" class="page-btn-css" [disabled]="paginationValue === count">
+        Next
+    </button>
+    <button (click)="lastClick()" class="page-btn-css" [disabled]="paginationValue === count">
+        Last
+    </button>
+</div>

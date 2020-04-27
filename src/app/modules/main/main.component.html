@@ -1,3 +1,5 @@
-<p>main works!</p>
-<app-grid></app-grid>
-<app-pagination></app-pagination>
+<div *ngIf="repositoryList.length">
+    <app-grid [repository]="repositoryList"></app-grid>
+    <app-pagination [totalCount]="totalCount" (countValue)="getPageCount($event)"></app-pagination>
+</div>
+<div [ngClass]="{'cover-spin': spinnerShow===true}"></div>
